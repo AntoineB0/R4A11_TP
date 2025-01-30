@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TP1</string>
     <string name="Texte_principal">Coucou j ai trouvé comment faire !</string>
+    <string name="display_label">Titre nouvelle vue</string>
 </resources>

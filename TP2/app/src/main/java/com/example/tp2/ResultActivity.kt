@@ -16,11 +16,11 @@ class ResultActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Récupérer les données envoyées par MainActivity
+
         val prenom = intent.getStringExtra("PRENOM") ?: "Inconnu"
         val anneeNaissance = intent.getStringExtra("ANNEE_NAISSANCE") ?: "0"
 
-        // Calculer l'âge
+        
         val age = calculateAge(anneeNaissance.toIntOrNull() ?: 0)
 
         setContent {

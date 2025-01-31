@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             WelcomeScreen { prenom, anneeNaissance ->
-                // Création de l'intent pour démarrer la deuxième activité
+
                 val intent = Intent(this, ResultActivity::class.java).apply {
                     putExtra("PRENOM", prenom)
                     putExtra("ANNEE_NAISSANCE", anneeNaissance)
@@ -46,7 +46,7 @@ fun WelcomeScreen(onValidate: (String, String) -> Unit) {
             modifier = Modifier.padding(bottom = 16.dp)
         )
 
-        // Champ pour le prénom
+
         TextField(
             value = prenom,
             onValueChange = { prenom = it },
@@ -57,7 +57,7 @@ fun WelcomeScreen(onValidate: (String, String) -> Unit) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Champ pour l'année de naissance
+
         TextField(
             value = anneeNaissance,
             onValueChange = { anneeNaissance = it },
@@ -68,7 +68,7 @@ fun WelcomeScreen(onValidate: (String, String) -> Unit) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Bouton pour valider et passer à l'autre activité
+
         Button(
             onClick = {
                 if (prenom.isNotEmpty() && anneeNaissance.isNotEmpty()) {

@@ -20,7 +20,7 @@ class ResultActivity : ComponentActivity() {
         val prenom = intent.getStringExtra("PRENOM") ?: "Inconnu"
         val anneeNaissance = intent.getStringExtra("ANNEE_NAISSANCE") ?: "0"
 
-        
+
         val age = calculateAge(anneeNaissance.toIntOrNull() ?: 0)
 
         setContent {
